@@ -48,26 +48,29 @@ function doResult(){
     
     const previousNum = parseFloat(displayPrevious.innerHTML)
     const currentNum = parseFloat(displayCurrent.innerHTML)
-    
-    if(displayPrevious.innerHTML.includes("+")){
+    if(displayCurrent.innerHTML != " " && displayPrevious.innerHTML != " "){
+        
+        if(displayPrevious.innerHTML.includes("+")){
         const finalResult = previousNum + currentNum
         displayCurrent.innerHTML = finalResult
-    }
-    
-    else if(displayPrevious.innerHTML.includes("-")){
+        }
+        
+        else if(displayPrevious.innerHTML.includes("-")){
         const finalResult = previousNum - currentNum
         displayCurrent.innerHTML = finalResult
-    }
-    
-    else if(displayPrevious.innerHTML.includes("/")){
+        }
+        
+        else if(displayPrevious.innerHTML.includes("/")){
         const finalResult = previousNum / currentNum
         displayCurrent.innerHTML = finalResult
-    }
-    
-    else if(displayPrevious.innerHTML.includes("*")){
+        }
+        
+        else if(displayPrevious.innerHTML.includes("*")){
         const finalResult = previousNum * currentNum
         displayCurrent.innerHTML = finalResult
+        }
+        
+        displayPrevious.innerHTML = " "
     }
-    
-    displayPrevious.innerHTML = " "    
+  
 }
