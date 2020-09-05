@@ -26,9 +26,11 @@ body, button, input{
     background: tomato;
     font-size: 24px;
     color: rgb(24, 23, 23);
+    transition: background .15s;
 }
 .calculator-grid button:hover{
     background: rgb(224, 224, 224);
+    transition: background .15s;
 }
 .calculator-display{
     grid-column: span 4;
